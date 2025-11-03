@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Multi-step form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="stage">
+        <div class="frame" role="main" aria-label="personal info card">
+            <div class="card">
+
+                <aside class="sidebar" aria-hidden="true">
+                    <div style="display:flex;align-items:center;gap:12px">
+                        <div
+                            style="width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px">
+                            01</div>
+                        <div>
+                            <div style="font-size:12px;font-weight:800;letter-spacing:0.6px">STEP 1</div>
+                            <div style="font-size:15px;font-weight:800;margin-top:4px">YOUR INFO</div>
+                        </div>
+                    </div>
+
+                    <div class="steps" aria-hidden="true">
+                        <div class="step-row">
+                            <div class="circle">2</div>
+                            <div>
+                                <div class="step-text">STEP 2</div>
+                                <div class="step-sub">SELECT PLAN</div>
+                            </div>
+                        </div>
+
+                        <div class="step-row">
+                            <div class="circle">3</div>
+                            <div>
+                                <div class="step-text">STEP 3</div>
+                                <div class="step-sub">ADD-ONS</div>
+                            </div>
+                        </div>
+
+                        <div class="step-row">
+                            <div class="circle">4</div>
+                            <div>
+                                <div class="step-text">STEP 4</div>
+                                <div class="step-sub">SUMMARY</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blob-large"></div>
+                    <div class="blob-small"></div>
+                    <svg class="scribble" width="64" height="40" viewBox="0 0 64 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 30 C18 8,46 8,62 30" stroke="rgba(255,255,255,0.6)" stroke-width="4"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </aside>
+
+                <section class="content">
+                    <h1 class="heading">Personal info</h1>
+                    <p class="desc">Please provide your name, email address, and phone number.</p>
+
+                    <form id="infoForm" onsubmit="return false;">
+                        <div>
+                            <label for="name">Name</label>
+                            <input id="name" class="input" type="text" placeholder="e.g. Stephen King" required />
+                        </div>
+
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input id="email" class="input" type="email" placeholder="e.g. stephenking@lorem.com"
+                                required />
+                        </div>
+
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" class="input" type="tel" placeholder="e.g. +1 234 567 890" required />
+                        </div>
+
+                        <div class="actions">
+                            <button id="nextBtn" class="btn">Next Step</button>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+
+            <svg class="dots" width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <circle cx="4" cy="4" r="2" fill="#1e3a8a" />
+                    <circle cx="10" cy="4" r="2" fill="#1e3a8a" />
+                    <circle cx="16" cy="4" r="2" fill="#1e3a8a" />
+                    <circle cx="22" cy="4" r="2" fill="#1e3a8a" />
+                </g>
+            </svg>
+
+            <svg class="zig" width="220" height="40" viewBox="0 0 220 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20 L30 0 L50 20 L70 0 L90 20 L110 0 L130 20 L150 0 L170 20 L190 0 L210 20" stroke="#ff7a6b"
+                    stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" />
+            </svg>
+
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
